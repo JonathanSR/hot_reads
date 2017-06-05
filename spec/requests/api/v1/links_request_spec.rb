@@ -18,14 +18,13 @@ describe "Links API" do
     create_list(:link, 2,read: 10)
     create_list(:link, 5, read: 20)
     create_list(:link, 2, read: 5)
-    
     get '/api/v1/links'
 
     expect(response).to be_success
 
     links = JSON.parse(response.body)
 
-    expect(items.count).to eq(10)
+    expect(links.count).to eq(10)
 
     link = links.first
 
