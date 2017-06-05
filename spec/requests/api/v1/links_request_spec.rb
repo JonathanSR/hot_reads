@@ -9,7 +9,7 @@ describe "Links API" do
 
     assert_response :success
     expect(response).to be_success
-    expect(link.url).to eq(link_param[:url])
+    expect(link.url).to eq(link_params[:url])
     expect(Link.count).to eq(1)
   end
 end
