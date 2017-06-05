@@ -7,7 +7,6 @@ class Api::V1::LinksController < ApplicationController
   def index
     @links = Link.top10
     render json: @links
-    byebug
   end
 
 private
