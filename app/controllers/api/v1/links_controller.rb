@@ -1,4 +1,5 @@
 class Api::V1::LinksController < ApplicationController
+skip_before_filter  :verify_authenticity_token
 
   def create
     render json: Link.create(link_params)
@@ -11,6 +12,6 @@ class Api::V1::LinksController < ApplicationController
 
 private
   def link_params
-    params.require(:link).permit(:url)
+    params.permit(:url)
   end
 end
