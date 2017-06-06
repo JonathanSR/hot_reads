@@ -1,24 +1,30 @@
-# README
+# HotLinks
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hotlinks is a rails api, that is used in conjunctions with the URLocbox app(git@github.com:JonathanSR/URLockbox). It is a site that is updated with the days hottest links submitted by the users through URLockbox. You can visit the live site at https://protected-woodland-35657.herokuapp.com/.
 
-Things you may want to cover:
+### Installing / Getting Started
 
-* Ruby version
+```shell
+git clone git@github.com:JonathanSR/hot_reads.git #clones this application to your machine.
+cd hot_reads/ #gives you access to the root folder.
+bundle #installs all dependencies needed to run the application
+rake db:create #creates the databases.
+rake db:migrate #runs all migrations that make changes to the databases.
+```
 
-* System dependencies
+### Usage
 
-* Configuration
+To run the test suite:
+```shell
+rspec
+```
 
-* Database creation
+To run the server(runs on port 3000):
+```shell
+rails s
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To access the database:
+```shell
+rails c
+```
